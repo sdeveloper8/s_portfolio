@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,h1,h3 {font-family: "Raleway", sans-serif}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f0f2f3, #11e4e8
+    );
+    scroll-behavior: smooth;
+}
+h1{
+    display: flex;
+    align-items: center;
+    color: rgba(187, 138, 22, 0.913);
+    height: 100px;
+    font-family: "Raleway", sans-serif;
+    font-size: 3rem;
+    position: relative;
+}
+h2{
+    color: rgba(187, 138, 22, 0.913);
+    letter-spacing: 1pt;
+    opacity: 0;
+    animation: slideInFromTop 5s ease forwards;
+}
+img{
+    width: 100%;
+}
+.weatherpics{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+  
+   
+    
+}
+.weatherpics > img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+.weatherpics > img:hover{
+    perspective: 500px;
+    transform: rotateY(345deg);
+    transition: all 3s ease-in-out;
+}
+.weatherpics > img:nth-child(1){
+    object-fit: cover; 
+    object-position: 100% 0;
+   
+}
+
+.background > input{
+    width: 7rem;
+    height: 3rem;
+    border:0;  
+}
+.background > input:nth-child(1){
+    background-color: #fb8e66;  
+}
+.background > input:nth-child(2){
+    background-color: #ecde06;
+}
+.showpics{
+    width: 80rem;
+    height: auto;
+}
+/* css for index page */
+/* #welcome{
+
+} */
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::before{
+        content: "";
+        inset: 0;
+        position: absolute;
+        background-image: url(images/sunset.jpg);
+        background-position:left;
+        background-size:cover;
+        opacity: .70;
+    }
+}
+.sushilla{
+    color:rgba(187, 138, 22, 0.913);
+}
+button.next{
+    margin-top: 3rem;
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    border-radius:50%;
+    background-color:rgba(187, 138, 22, 0.913);
+    font-size: 10pt;
+    font-weight: 600;
+    position: absolute;
+   
+    animation: slideInFromTop 4s ease-in forwards;
+   
+}
+.next a{
+    text-decoration: none;
+    color: #f0f2f3;
+}
+ .introduction{
+    padding: 0px 30px; 
+    
+}
+.introduction > p{
+    color: rgba(45, 33, 5, 0.913);
+    font-size: large;
+    font-weight: 600;
+    position: absolute;
+    letter-spacing: 1pt;
+    animation: slideInFromTop 5s ease forwards;
+}
+.myself{
+    margin: 0px 100px;
+    width: 30%;
+    height: auto;
+   flex-direction: column;
+   border-radius: 30% 0%;
+   opacity: 0;
+
+}
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.image-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+  #animated-text {
+    opacity: 0;
+    animation: slideInFromTop 5s ease forwards;
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
