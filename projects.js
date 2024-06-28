@@ -2,8 +2,8 @@ const span = document.querySelectorAll(".project-image span");
 console.log(span);
 
 const openCover = ((e)=>{
-
-    e.target.style.visibility = "hidden";
+    e.target.style.backgroundColor = "transparent";
+    //e.target.style.visibility = "hidden";
 
 })
 const closeCover = ((e)=>{
